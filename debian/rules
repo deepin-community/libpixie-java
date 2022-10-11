@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+# debian/rules file for libfonts-java (uses cdbs)
+
+export CLASSPATH=/usr/share/java:commons-logging.jar:/usr/share/java/libbase.jar
+
+%:
+	dh $@ --with javahelper
+
+override_dh_clean:
+	dh_clean
+	-rm -rf build
+	-rm -rf javadoc
+	-rm -f dist/libpixie-*.jar
+
+override_dh_link:
+	dh_link
+	# Creating a libpixie.jar symlink to the installed jar.
+	nameJar=$$(find debian/libpixie-java/usr/share/java/ -name "*.jar") && \
+	        echo $$nameJar && \
+	        ln -s $$(basename $$nameJar) debian/libpixie-java/usr/share/java/libpixie.jar

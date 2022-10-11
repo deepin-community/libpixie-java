@@ -1,0 +1,138 @@
+libpixie-java (1:1.1.6-4) unstable; urgency=medium
+
+  * Team upload
+  * Depending on debhelper-compat 13, dropping old compat 5 file
+    (Closes: #965681)
+  * Indicating Vcs-* fields, linking to Salsa (Closes: #649272)
+  * Refreshing d/copyright
+  * Setting d/watch version to 4
+  * Indicating repack information in d/copyright and d/watch
+  * Dropping now useless d/README.Debian-source and d/orig-tar.sh
+  * Dropping now useless d/dirs file
+  * Source format is now 3.0 (quilt)
+  * Now building with dh instead of cdbs
+  * Adding dependencies manually, as javahelper-generated ones are too wide
+  * Setting Standards version to 4.6.0:
+    - Setting Rules-Requires-Root: no
+    - Using 1.0 copyright-format in d/copyright
+  * Trim trailing whitespace.
+
+ -- Pierre Gruet <pgt@debian.org>  Sat, 04 Sep 2021 15:24:58 +0200
+
+libpixie-java (1:1.1.6-3.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Tue, 22 Dec 2020 01:09:20 +0100
+
+libpixie-java (1:1.1.6-3) unstable; urgency=low
+
+  * merge from Ubuntu:
+    - add missing ant-contrib build-dep... (closes: #648749, #652187)
+
+ -- Rene Engelhard <rene@debian.org>  Thu, 29 Dec 2011 23:20:39 +0100
+
+libpixie-java (1:1.1.6-2) unstable; urgency=low
+
+  * merge libbase 1.1.6-2 changes
+
+ -- Rene Engelhard <rene@debian.org>  Tue, 01 Nov 2011 15:18:43 +0000
+
+libpixie-java (1:1.1.6-1) unstable; urgency=low
+
+  * new upstream release
+  * switch back to Debian Java Maintainers, me as Uploader
+  * remove JRE depends
+  * add classpath to jar using jh_classpath
+  * use jh_depends / ${java:Depends}
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 25 Sep 2011 14:07:57 +0000
+
+libpixie-java (1:0.8.8-3) unstable; urgency=low
+
+  * QA upload.
+  * Orphaning package.
+
+ -- Torsten Werner <twerner@debian.org>  Tue, 16 Aug 2011 22:44:37 +0200
+
+libpixie-java (1:0.8.8-2) unstable; urgency=low
+
+  [ Matthias Klose ]
+  * (Build-)depend on default-jre/-jdk.
+
+  [ Torsten Werner ]
+  * Add myselfo to Uploaders.
+  * Add missing Depends: ${misc:Depends}.
+  * Switch to debhelper compat level 4.
+  * Update Standards-Version: 3.8.2.
+  * Change Section: java.
+  * Add Vcs-* headers.
+
+ -- Torsten Werner <twerner@debian.org>  Mon, 03 Aug 2009 22:43:46 +0200
+
+libpixie-java (1:0.8.8-1) unstable; urgency=low
+
+  * New upstream release
+  * remove bogus and unintended ant.properties file
+
+ -- Rene Engelhard <rene@debian.org>  Thu, 27 Sep 2007 15:51:22 +0200
+
+libpixie-java (1:0.8.7-1) unstable; urgency=low
+
+  * New upstream release
+  * move to main
+  * add myself to Uploaders:, remove Wolfgang
+  * add watch file and orig-tar.sh, thanks Kumar Appaiah
+
+ -- Rene Engelhard <rene@debian.org>  Thu, 30 Aug 2007 12:52:52 +0200
+
+libpixie-java (1:0.8.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Added epoch as previous releases used dates
+  * Build-depends and depends on libjcommon-java (>= 1.0.0-1)
+  * Convert build system to cdbs - added build-dependency
+  * Move package to pkg-java-maintainers for comaintenance,
+    added Christian Bayle and myself as uploaders
+  * Although build with free tools its not yet completely usable with free
+    tools alone (needs Java2D) - therefore it stays in contrib for now.
+  * Updated copyright
+  * Added ant.properties to specify build target and jar name
+  * Added README.Debian-source how the upstream tarball was cleaned
+  * Added patch to remove bogus manifest classpath from jar
+  * Added compat file (level 4)
+  * Updated description based on README file
+  * Standards-Version 3.6.2 (no changes)
+
+ -- Wolfgang Baer <WBaer@gmx.de>  Thu, 02 Feb 2006 15:48:42 +0100
+
+libpixie-java (20030705-4) unstable; urgency=high
+
+  * Fixed FTBFS: ./debian_patch: Permission denied (Closes: #306749)
+
+ -- Christian Bayle <bayle@debian.org>  Thu, 28 Apr 2005 22:07:56 +0200
+
+libpixie-java (20030705-3) unstable; urgency=low
+
+  * Added dependancy on java2-runtime (Closes: #202401)
+
+ -- Christian Bayle <bayle@debian.org>  Tue, 22 Jul 2003 20:10:28 +0200
+
+libpixie-java (20030705-2) unstable; urgency=low
+
+  * Manage external dependency on jcommon differently
+
+ -- Christian Bayle <bayle@debian.org>  Thu, 10 Jul 2003 11:25:58 +0200
+
+libpixie-java (20030705-1) unstable; urgency=low
+
+  * Initial Release extraction of cvs.
+
+ -- Christian Bayle <bayle@debian.org>  Sun,  6 Jul 2003 20:45:53 +0200
+
+libpixie-java (0.7.6-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Christian Bayle <bayle@debian.org>  Sat,  5 Jul 2003 02:51:05 +0200
